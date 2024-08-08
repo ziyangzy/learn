@@ -1,0 +1,49 @@
+###分页查询课程列表信息
+POST {{gateway_host}}/content/course/list?pageNo=1&pageSize=2
+Content-Type: application/json
+
+{
+  "audiStatus": "202002",
+  "courseName": ""
+}
+
+###查询课程分类信息
+GET {{content_host}}/content/course-category/tree-nodes
+
+###新增课程
+POST {{content_host}}/content/course
+Content-Type: application/json
+
+{
+  "charge": "",
+  "price": 10,
+  "originalPrice":100,
+  "qq": "22333",
+  "wechat": "223344",
+  "phone": "13333333",
+  "validDays": 365,
+  "mt": "1-1",
+  "st": "1-1-1",
+  "name": "",
+  "pic": "sdf",
+  "teachmode": "200002",
+  "users": "初级人员",
+  "tags": "egse",
+  "grade": "204001",
+  "description": "awf"
+}
+
+###查询单个课程
+GET {{content_host}}/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE3MjI2NTU1NDEsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6ImUwYTI1MWJiLWFlYzEtNGFmNy05YmRlLWZjODkzMGMyZjYzZSIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.L3aa9wNX-LBEvh90mblwoCe5o6xzIwkyxkufiIydAfo
+
+###查询单个课程
+GET {{gateway_host}}/content/course/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJjb21wYW55SWRcIjpcIjEyMzIxNDE0MjVcIixcImNyZWF0ZVRpbWVcIjpcIjIwMjItMDktMjhUMDg6MzI6MDNcIixcImlkXCI6XCI1MlwiLFwibmFtZVwiOlwiTeiAgeW4iFwiLFwic2V4XCI6XCIxXCIsXCJzdGF0dXNcIjpcIlwiLFwidXNlcm5hbWVcIjpcInQxXCIsXCJ1dHlwZVwiOlwiMTAxMDAyXCJ9Iiwic2NvcGUiOlsiYWxsIl0sImV4cCI6MTcyMjY2NDI4OSwiYXV0aG9yaXRpZXMiOlsicDEiXSwianRpIjoiNWY4NzRjZmMtMTY0Ny00YzIzLWJmMzAtNmM4Njc2YmM4YWFkIiwiY2xpZW50X2lkIjoiWGNXZWJBcHAifQ.Kfp33GujMC-astsQmHnLtEVuCnpYWv1EMQuz3OoXLHc
+
+### 查询某个课程的课程计划
+
+GET {{content_host}}/content/teachplan/117/tree-nodes
+
+### 课程发布
+POST {{content_host}}/content/coursepublish/3
